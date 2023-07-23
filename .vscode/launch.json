@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "BreakingSingleton",
+            "request": "launch",
+            "mainClass": "com.vrx.designpatterns.creationalDesignPattern.singletonPattern.BreakingSingleton",
+            "projectName": "design-patterns"
+        },
+        {
+            "type": "java",
+            "name": "SingletonPatternDemo",
+            "request": "launch",
+            "mainClass": "com.vrx.designpatterns.creationalDesignPattern.singletonPattern.SingletonPatternDemo",
+            "projectName": "design-patterns"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DesignPatternsApplication<design-patterns>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.vrx.designpatterns.DesignPatternsApplication",
+            "projectName": "design-patterns",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
