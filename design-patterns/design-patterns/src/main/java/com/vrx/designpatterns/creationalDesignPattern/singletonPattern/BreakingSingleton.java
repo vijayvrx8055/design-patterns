@@ -12,10 +12,14 @@ import java.lang.reflect.InvocationTargetException;
 public class BreakingSingleton {
     public static void main(String[] args) throws NoSuchMethodException, SecurityException, InstantiationException,
             IllegalAccessException, IllegalArgumentException, InvocationTargetException, FileNotFoundException,
-            IOException, ClassNotFoundException {
+            IOException, ClassNotFoundException, CloneNotSupportedException {
         // ----------------------------------------------
         // Methods to break Singleton Design Pattern
         // ----------------------------------------------
+        // 1. Reflection API
+        // 2. Deserialization : Serialize and deserialize
+        // 3. Cloning
+        // ------------------------------------------------------
         // 1. Reflection API
         User user = User.getUser(); // 1st object
         System.out.println(user.hashCode());
@@ -71,6 +75,16 @@ public class BreakingSingleton {
 
         // Solution 1: implement readResolve() method in User.java
         // gives same object even after deserialization
+        // ----------------------------------------------------
+
+        // 3. Cloning
+        System.out.println();
+        Home home = Home.getHome();
+        System.out.println("home object1:" + home.hashCode());
+        Home hom = (Home) home.clone();
+        System.out.println("home object2:" + hom.hashCode());
+
+        // Solution 1: return same instance of class from clone() method
 
     }
 }
